@@ -1,2 +1,3 @@
 # kotlin-spark-sample
-sample spark application
+### 概要
+[黒ベコ本](http://amzn.asia/9sjlYh7)の第2章をベースにしたサンプルアプリです。
