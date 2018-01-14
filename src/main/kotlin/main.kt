@@ -15,7 +15,6 @@ fun main(args: Array<String>) {
                 listOf(
                         Task(0, "お金を振り込む", false),
                         Task(1, "電気を消す", false))
-            },
-            { model -> objectMapper.writeValueAsString(model) }
+            }, objectMapper::writeValueAsString
     )
 }
