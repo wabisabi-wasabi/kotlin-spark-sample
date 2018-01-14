@@ -10,8 +10,12 @@ fun main(args: Array<String>) {
         "Hello ${name ?: "world"}"
     }
 
-    get("/task") { request, response ->
-        val task = listOf(Task(0, "お金を振り込む", false), Task(1, "電気を消す", false))
-        objectMapper.writeValueAsString(task)
-    }
+    get("/task",
+            { request, response ->
+                listOf(
+                        Task(0, "お金を振り込む", false),
+                        Task(1, "電気を消す", false))
+            },
+            { model -> objectMapper.writeValueAsString(model) }
+    )
 }
